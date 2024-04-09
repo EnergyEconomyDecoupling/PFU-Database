@@ -442,8 +442,8 @@ get_pipeline <- function(countries = "all",
     targets::tar_target_raw(
       "PhivecMW", 
       quote(MWTools::phi_vec_mw(.phi_table = PhiConstants,
-                                                                  mw_energy_carriers = MWTools::mw_products, 
-                                                                  matrix_class = matrix_class))),
+                                mw_energy_carriers = MWTools::mw_products, 
+                                matrix_class = matrix_class))),
     # This target has a phi vector for every Country-Year combination.
     # Note the plural spelling.
     targets::tar_target_raw(
