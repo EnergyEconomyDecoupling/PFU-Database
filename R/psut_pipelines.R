@@ -480,9 +480,9 @@ get_pipeline <- function(countries = "all",
     # 
     targets::tar_target_raw(
       "PSUT", 
-                            quote(build_psut_dataframe(psutiea = PSUTIEA,
-                                                               psutmw = PSUTMW,
-                                                               psutieamw = PSUTIEAMW))
+      quote(build_psut_dataframe(psutiea = PSUTIEA,
+                                 psutmw = PSUTMW,
+                                 psutieamw = PSUTIEAMW))
     ),
     targets::tar_target_raw("ReleasePSUT", 
                             quote(PFUPipelineTools::release_target(pipeline_releases_folder = PipelineReleasesFolder,
